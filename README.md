@@ -114,3 +114,6 @@ Show Schools Page: http://localhost:3000/showSchools
 
 4. Deployment
 This project is configured to be easily deployed to platforms like Vercel or Netlify. You will need to use a cloud-based MySQL service (like PlanetScale) and configure environment variables for your database credentials.
+
+
+vercel link : https://school-management-app-sepia.vercel.app/
