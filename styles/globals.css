@@ -1,0 +1,237 @@
+/* globals.css */
+
+/* Import a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --white-text-color: white;
+    /* show school part */
+    --nav-bar-bg-color-gradient1: #f6a8b5;
+    --nav-bar-bg-color-gradient2: #8f008f;
+    --show-school-card-bg-color: #ffffff;
+    --show-school-card-box-shoadow-color: #ffffff;
+    --show-school-card-hover-box-shoadow-color: #ffffff;
+    --card-title-text-color: #1a202c;
+    --card-text-text-color: #4a5568;
+    /* add school part */
+    --add-school-main-container-bg-color: #f2f0f6;
+    --show-school-btn-border-color: white;
+    --show-school-btn-hover-bg-color: orange;
+    --add-school-form-container-bg-color:white;
+    --add-school-form-container-border-color:grey;
+    --add-school-form-container-shadow-color:#80808099;
+    --add-school-form-button-hover:grey;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+/* -----------------show school page -------------------------------------------- */
+
+/* show school main content of the page  */
+.showSchoolContent {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--add-school-main-container-bg-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23bfb8c9' fill-opacity='0.26' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* show school container for the school cards   */
+.showSchoolCardContainer {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 10px;
+    overflow-y: scroll;
+    gap: 5%;
+    padding: 10px 0;
+}
+
+
+/* show school cards */
+.showSchoolCard {
+    background-color: var(--show-school-card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--show-school-card-box-shoadow-color);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 30%;
+    height: 65vh;
+}
+
+.showSchoolCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--show-school-card-hover-box-shoadow-color);
+}
+
+/* show school images  */
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+/* content of school card */
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* title of card */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--card-title-text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* school address */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1rem;
+    color: var(--card-text-text-color);
+}
+
+
+
+
+/*--------------------------------------- ADD SCHOOL CSS ---------------------------------------------------*/
+
+/* main coontainer of add school */
+.addSchoolMainContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--add-school-main-container-bg-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23bfb8c9' fill-opacity='0.26' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* add school navbar */
+.addSchoolNavBar {
+    width: 100%;
+    height: 12vh;
+    background: linear-gradient(120deg, var(--nav-bar-bg-color-gradient1), var(--nav-bar-bg-color-gradient2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 8px;
+}
+
+/* show school button */
+.showSchoolBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--show-school-btn-border-color);
+    background-color: transparent;
+    width: 13%;
+    height: 7vh;
+    border-radius: 10px ;
+    cursor: pointer;
+}
+
+.showSchoolBtn:hover {
+    background-color: var(--show-school-btn-hover-bg-color);
+    border: none;
+}
+
+.showSchoolBtn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7vh;
+    border-radius: 10px;
+    color:var(--white-text-color) ;
+    text-decoration: none;
+}
+
+/* addSchoolFormContainer */
+
+.addSchoolFormContainer {
+    width: 70%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--add-school-form-container-bg-color);
+    border: 1px solid var(--add-school-form-container-border-color);
+    border-radius: 10px;
+    box-shadow: 6px 2px 5px 0px var(--add-school-form-container-shadow-color);
+}
+
+
+
+/* addSchoolForm */
+.addSchoolForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.addSchoolFormImgSubmission {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+
+.chooseFile {
+    cursor: pointer;
+}
+
+/* addSchoolFormBtn */
+.addSchoolFormBtn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.addSchoolFormBtn button {
+    width: 50%;
+    cursor: pointer;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+
+.addSchoolFormBtn button:hover {
+    width: 60%;
+    background-color: var(--add-school-form-button-hover);
+}
