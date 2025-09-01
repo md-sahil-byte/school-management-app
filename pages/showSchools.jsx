@@ -45,7 +45,7 @@ const ShowSchools = () => {
       <div className="addSchoolNavBar">
         {/* logo */}
         <img src="" alt="logo" />
-        <button className="showSchoolBtn"><a href="/addSchool">Add School</a></button>
+        <button className="showSchoolBtn"><a href="/">Add School</a></button>
       </div>
 
       <div className="showSchoolContent">
